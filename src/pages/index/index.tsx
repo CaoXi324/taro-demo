@@ -24,9 +24,8 @@ export default class Index extends Component {
   render () {
     return (
       <View className='index'>
-        <Text>Hello world!hhh</Text>
+        <Text>Hello world!</Text>
         <Text onClick={this.handleClick}>items</Text>
-        {/* <Navigator url='/pages/items/items'>items</Navigator> */}
       </View>
     )
   }
