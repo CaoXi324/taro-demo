@@ -1,6 +1,7 @@
 import { Component } from 'react'
 import Taro from '@tarojs/taro'
 import { View, Text } from '@tarojs/components'
+import LanguageSelector from '../../components/languageSelector'
 import './index.scss'
 
 export default class Index extends Component {
@@ -25,6 +26,7 @@ export default class Index extends Component {
     return (
       <View className='index'>
         <Text>Hello world!</Text>
+        <LanguageSelector />
         <Text onClick={this.handleClick}>items</Text>
       </View>
     )
