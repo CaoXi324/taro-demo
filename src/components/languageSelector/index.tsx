@@ -2,6 +2,7 @@ import React from "react";
 import { Radio, RadioGroup, View } from "@tarojs/components";
 import { useDispatch, useSelector } from "react-redux";
 import { CHANGE_LANGUAGE } from "../../constants/index";
+import {Title} from "./styles";
 
 function LanguageSelector() {
     const language = useSelector(state => state.language);
@@ -23,13 +24,13 @@ function LanguageSelector() {
     ]
 
     return (
-        <View>
+        <Title>
             <RadioGroup onChange={(event) => {dispatch({type: CHANGE_LANGUAGE, payload: event.detail.value})}}>
             {languages.map(((item) => {
                 return <Radio value={item.value} key={item.value} checked={item.checked}>{item.text}</Radio>;
             }))}
             </RadioGroup>
-        </View>
+        </Title>
     )
 }
 
