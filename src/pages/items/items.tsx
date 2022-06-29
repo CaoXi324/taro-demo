@@ -8,23 +8,21 @@ function Items() {
 
     useEffect(()=>{
         Taro.request({
-            url: 'https://api.coindesk.com/v1/bpi/currentprice.json',
+            url: 'http://127.0.0.1:8000/home',
             success: (res) => {
                 setItems(res.data)
             },
-            fail: () => {setItems({time: 'no data'})}
+            fail: () => {setItems({})}
         })
     },[])
-    
-    
-        
+
     return (
         <>
         <Text>time</Text>
         <Text>{items?.time?.updated}</Text>
         </>
     )
-    
+
 }
 
 export default Items;
