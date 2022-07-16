@@ -18,7 +18,7 @@ function Items() {
 
     return (
         <>
-        <Text>time</Text>
+        <Text>current time</Text>
         <Text>{items?.time?.updated}</Text>
         </>
     )
